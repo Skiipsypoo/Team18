@@ -1,6 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"math/rand"
+	"fmt"
+)
+
+func generateArray() []int {
+	var arr []int
+	for i := 0; i < 10; i++ {
+		arr[i] = rand.Intn(10)
+	}
+	return arr
+}
 
 func bubbleSort(arr []int) []int {
 	var swapped bool
