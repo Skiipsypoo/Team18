@@ -13,10 +13,22 @@ var sum_tests_int8 = []struct {
 	{120, 1, 119},
 }
 
+var sum_tests_int32 = []struct {
+	n1       int8 
+	n2       int8 
+	expected int8
+}{
+	{}
+}
+
 func TestSumInt8(t *testing.T) {
 	for _, v := range sum_tests_int8 {
 		if val := SumInt8(v.n1, v.n2); val != v.expected {
 			t.Errorf("Sum(%d, %d) returned %d, expected %d", v.n1, v.n2, val, v.expected)
 		}
 	}
+}
+
+func TestSumInt32(t *testing.T) {
+
 }

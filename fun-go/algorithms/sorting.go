@@ -1,7 +1,7 @@
 package algorithms
 
 // Les https://en.wikipedia.org/wiki/Bubble_sort
-func Bubble_sort_modified(list []int) []int {
+func Bubble_sort_modified(list []int) {
 	var swapped bool
 	for i := 0; i < len(list) - 1; i++ {
 		swapped = false
@@ -17,7 +17,6 @@ func Bubble_sort_modified(list []int) []int {
 			break 
 		}
 	}
-	return list 
 }
 
 // Implementering av Bubble_sort algoritmen
