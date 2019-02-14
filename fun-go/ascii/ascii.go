@@ -1,9 +1,9 @@
-package ascii
+package main
 
 import "fmt"
 
 func main() {
-    IterateOverASCIIStringLiteral(ascii)
+	fmt.Println(GreetingASCII())
 }
 
 const ascii = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f" +
@@ -30,19 +30,13 @@ const ascii = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f"
 func IterateOverASCIIStringLiteral(stringLiteral string) {
 	// Kode for Oppgave 1a
 	for j := 0; j < len(stringLiteral); j++ {
-			fmt.Printf("%X", stringLiteral[j])
-			fmt.Print(" ")
-			fmt.Printf("%b", stringLiteral[j])
-			fmt.Print(" ")
-			fmt.Printf("%d", stringLiteral[j])
-			fmt.Println("")
-}
-    /*
-      b := []byte(stringLiteral)
-    for i := 0; i < len(b); i++ {
-        fmt.Println(b[i])
-    }
-    */
+		fmt.Printf("%X", stringLiteral[j])
+		fmt.Print(" ")
+		fmt.Printf("%b", stringLiteral[j])
+		fmt.Print(" ")
+		fmt.Printf("%d", stringLiteral[j])
+		fmt.Println("")
+	}
 }
 
 // Unix-like operating systems are known to use it as erase control character, i.e. to delete the previous character in the line mode. 
@@ -56,5 +50,16 @@ func IterateOverASCIIStringLiteral(stringLiteral string) {
 // som inneholder kun ASCII tegn (ikke utvidet ASCII).
 // Gjelder oppgave 1c
 func GreetingASCII() string {
-    return "Hello :-)"
+	str := "Hello :-)"
+	var b = []byte(str) 
+	for i := 0; i < len(str); i++ {
+		fmt.Println(b[i])
+	}
+	/*
+      b := []byte(stringLiteral)
+    for i := 0; i < len(b); i++ {
+        fmt.Println(b[i])
+    }
+    */
+	return str
 }
