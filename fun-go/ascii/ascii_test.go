@@ -1,10 +1,9 @@
-package ascii 
+package main
 
 import (
 	"testing"
 	"unicode"
 )
-
 
 func TestGreetingsASCII(t *testing.T) {
 	var str string 
